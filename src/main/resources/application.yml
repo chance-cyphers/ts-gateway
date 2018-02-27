@@ -1,0 +1,19 @@
+server:
+  port: 5555
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: https://ts-eureka-server.herokuapp.com/eureka
+
+zuul:
+  routes:
+    travelling-salesman-api:
+      url:  https://safe-beyond-32236.herokuapp.com/
+
+endpoints:
+  routes:
+    sensitive: false
